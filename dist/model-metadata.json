@@ -1,0 +1,95 @@
+{
+  "trainingPairs": 1250,
+  "folds": 9,
+  "seed": 42,
+  "secondsScale": 1.0,
+  "selected": {
+    "dt": "lgbm_l1",
+    "lat": "blend",
+    "lon": "median",
+    "depth": "lgbm_l1",
+    "class": "blend"
+  },
+  "featureNames": [
+    "year",
+    "month",
+    "day",
+    "hour",
+    "min",
+    "sec",
+    "lat",
+    "lon",
+    "depth",
+    "class",
+    "ts",
+    "doy_sin",
+    "doy_cos",
+    "h_sin",
+    "h_cos",
+    "lat_x_lon",
+    "class_x_depth"
+  ],
+  "ranges": {
+    "year": [
+      1980.0,
+      2013.0
+    ],
+    "month": [
+      1.0,
+      12.0
+    ],
+    "day": [
+      1.0,
+      31.0
+    ],
+    "hour": [
+      0.0,
+      23.0
+    ],
+    "min": [
+      0.0,
+      59.0
+    ],
+    "sec": [
+      0.0,
+      598.0
+    ],
+    "lat": [
+      35.42,
+      48.1
+    ],
+    "lon": [
+      67.15,
+      85.32
+    ],
+    "depth": [
+      -1.0,
+      70.0
+    ],
+    "class": [
+      10.1,
+      17.5
+    ]
+  },
+  "mae": {
+    "lat": 0.06629193525195065,
+    "lon": 0.08908800000000007,
+    "depth": 3.9808811344831496,
+    "class": 0.7983718048212629
+  },
+  "elapsedHoursMAE": 54.15411980056725,
+  "timeSelectionMetric": "Mean MAE across six calendar fields, as supplied; mixed units",
+  "validation": "Nine shuffled folds; target selection on the same folds. Not a prospective or independent test.",
+  "example": {
+    "year": 2018.0,
+    "month": 2.0,
+    "day": 14.0,
+    "hour": 23.0,
+    "min": 21.0,
+    "sec": 505.0,
+    "lat": 38.46,
+    "lon": 73.45,
+    "depth": 60.0,
+    "class": 10.7
+  }
+}
